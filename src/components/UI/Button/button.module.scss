@@ -1,0 +1,48 @@
+@use "sass:map";
+@use "../../../styles/typography" as typo;
+@use "../../../styles/variables" as vars;
+
+.button {
+  padding: 20px 35px;
+  border-radius: 14px;
+  border: 1px solid;
+  font-size: map.get(map.get(typo.$typography-desktop, "h4"), "font-size");
+  line-height: 28px;
+  letter-spacing: 0%;
+  text-align: center;
+  cursor: pointer;
+
+  &:hover {
+    background-color: rgba(vars.$color-text-green, 0.5);
+    color: vars.$color-text-dark;
+    border: none;
+  }
+
+  &:active {
+    transform: scale(0.98);
+  }
+}
+
+.button--dark {
+  background-color: vars.$color-text-dark;
+  color: vars.$color-text-white;
+  border-color: vars.$color-text-dark;
+}
+
+.button--white {
+  background-color: vars.$color-text-white;
+  color: vars.$color-text-dark;
+  border-color: vars.$color-text-dark;
+
+  &:hover {
+    background-color: vars.$color-text-dark;
+    color: vars.$color-text-white;
+    border: none;
+  }
+}
+
+.button--green {
+  background-color: vars.$color-text-green;
+  color: vars.$color-text-dark;
+  border-color: vars.$color-text-green;
+}

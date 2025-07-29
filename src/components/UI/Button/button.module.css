@@ -1,0 +1,46 @@
+.button {
+  padding: 20px 35px;
+  border-radius: 14px;
+  border: 1px solid;
+  font-size: 20px;
+  line-height: 28px;
+  letter-spacing: 0%;
+  text-align: center;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: rgba(185, 255, 102, 0.5);
+  color: #191a23;
+  border: none;
+}
+
+.button:active {
+  -webkit-transform: scale(0.98);
+          transform: scale(0.98);
+}
+
+.button--dark {
+  background-color: #191a23;
+  color: #f3f3f3;
+  border-color: #191a23;
+}
+
+.button--white {
+  background-color: #f3f3f3;
+  color: #191a23;
+  border-color: #191a23;
+}
+
+.button--white:hover {
+  background-color: #191a23;
+  color: #f3f3f3;
+  border: none;
+}
+
+.button--green {
+  background-color: #b9ff66;
+  color: #191a23;
+  border-color: #b9ff66;
+}
+/*# sourceMappingURL=Button.module.css.map */
