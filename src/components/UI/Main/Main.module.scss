@@ -1,5 +1,6 @@
-@import "../../../styles/typography.scss";
-@import "../../../styles/variables.scss";
+@use "sass:map";
+@use "../../../styles/typography" as typo;
+@use "../../../styles/variables" as vars;
 
 .main_content {
   margin-top: 70px;
@@ -13,10 +14,10 @@
     justify-content: space-between;
   }
   &__title {
-    font-size: map-get(map-get($typography-desktop, "h1"), "font-size");
+    font-size: map.get(map.get(typo.$typography-desktop, "h1"), "font-size");
   }
   &__discription {
-    font-size: map-get(map-get($typography-desktop, "h4"), "font-size");
+    font-size: map.get(map.get(typo.$typography-desktop, "h4"), "font-size");
   }
   &__image {
     width: 100%;
