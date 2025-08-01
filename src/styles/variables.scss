@@ -5,6 +5,7 @@ $colors: (
   green: #b9ff66,
   dark: #191a23,
   white: #ffff,
+  grey: #f3f3f3,
 );
 
 // Семантические названия цветов
@@ -12,6 +13,7 @@ $colors: (
 $color-text-green: map.get($colors, green);
 $color-text-dark: map.get($colors, dark);
 $color-text-white: map.get($colors, white);
+$color-text-grey: map.get($colors, grey);
 
 // ======= 2. Шрифты =======
 
