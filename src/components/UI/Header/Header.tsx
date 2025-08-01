@@ -14,7 +14,7 @@ export const Header = () => {
 
   return (
     <>
-      <div className="container">
+      
         <div className={styles.header}>
           <a href="" className={styles.header__logo}>
             <img
@@ -29,7 +29,7 @@ export const Header = () => {
             <Button option="White">Request a quote</Button>
           </nav>
         </div>
-      </div>
+   
     </>
   );
 };
