@@ -22,7 +22,7 @@ export const ServiceScreen = () => {
           />
         </svg>
       ),
-      option: "Grey",
+      option: "Grey" as const,
     },
     {
       id: 2,
@@ -43,7 +43,7 @@ export const ServiceScreen = () => {
           />
         </svg>
       ),
-      option: "Green",
+      option: "Green" as const,
     },
     {
       id: 3,
@@ -64,7 +64,7 @@ export const ServiceScreen = () => {
           />
         </svg>
       ),
-      option: "Dark",
+      option: "Dark" as const,
     },
     {
       id: 4,
@@ -85,7 +85,7 @@ export const ServiceScreen = () => {
           />
         </svg>
       ),
-      option: "Grey",
+      option: "Grey" as const,
     },
     {
       id: 5,
@@ -106,7 +106,7 @@ export const ServiceScreen = () => {
           />
         </svg>
       ),
-      option: "Green",
+      option: "Green" as const,
     },
     {
       id: 6,
@@ -127,7 +127,7 @@ export const ServiceScreen = () => {
           />
         </svg>
       ),
-      option: "Dark_Green",
+      option: "Dark_Green" as const,
     },
   ];
 
