@@ -2,12 +2,14 @@ import type { FC, ReactNode } from "react";
 import styles from "./Card.module.scss";
 import clsx from "clsx";
 
+type CardOption = 'Grey' | 'Green' | 'Black' | 'Dark' | 'Dark_Green';
+
 interface ICard {
   title1: string;
   title2: string;
   image: ReactNode;
   children: ReactNode;
-  option: 'Dark' | 'Grey' | 'Green' | 'Dark_Green'
+  option: CardOption
 }
 
 export const Card: FC<ICard> = ({ title1, title2, image, children, option }) => {
