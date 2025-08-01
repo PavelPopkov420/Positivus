@@ -49,6 +49,7 @@
       border-radius: 50%;
       border: none;
       background-color: vars.$color-text-dark;
+      color: vars.$color-text-white;
       cursor: pointer;
     }
   }
@@ -65,7 +66,11 @@
       }
     }
     &__link {
+      color: vars.$color-text-white;
       &_btn {
+        svg {
+          color: vars.$color-text-dark;
+        }
         padding: 8px 8px;
         border-radius: 50%;
         border: none;
@@ -87,7 +92,11 @@
       }
     }
     &__link {
+      color: vars.$color-text-white;
       &_btn {
+        svg {
+          color: vars.$color-text-dark;
+        }
         padding: 8px 8px;
         border-radius: 50%;
         border: none;
