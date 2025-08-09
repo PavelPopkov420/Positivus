@@ -1,0 +1,56 @@
+@use "sass:map";
+@use "../../../styles/typography" as typo;
+@use "../../../styles/variables" as vars;
+
+.studies-info {
+  margin-top: 80px;
+  width: 100%;
+  background-color: vars.$color-text-dark;
+  border-radius: 45px;
+  height: 326px;
+  display: flex;
+  align-items: center;
+
+  &__list {
+    display: flex;
+    padding: 23px 64px;
+    list-style: none;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &__description {
+    color: vars.$color-text-white;
+    font-size: map.get(map.get(typo.$typography-desktop, "p"), "font-size");
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    text-decoration: none;
+    color: vars.$color-text-green;
+  }
+}
+
+.studies-info__item--left {
+  padding-right: 64px;
+}
+
+.studies-info__item--center {
+  padding-right: 64px;
+  padding-left: 64px;
+  border: 1px solid;
+  border-top: none;
+  border-bottom: none;
+  border-left-color: vars.$color-text-white;
+  border-right-color: vars.$color-text-white;
+}
+
+.studies-info__item--right {
+  padding-left: 64px;
+}

@@ -1,0 +1,48 @@
+@use "sass:map";
+@use "../../../styles/typography" as typo;
+@use "../../../styles/variables" as vars;
+
+.consultation {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border-radius: 45px;
+  background-color: vars.$color-text-grey;
+  box-shadow: 0px 7px 1px rgba($color: #000000, $alpha: 1);
+
+  &__item {
+    padding: 41px 57px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  &__number {
+    font-size: map.get(map.get(typo.$typography-desktop, "h1"), "font-size");
+  }
+  &__title {
+    font-size: map.get(map.get(typo.$typography-desktop, "h3"), "font-size");
+  }
+  &__btn {
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    border-color: vars.$color-text-dark;
+    margin-left: auto;
+    cursor: pointer;
+  }
+
+  &__content {
+    align-items: center;
+    max-width: 1075px;
+    width: 100%;
+    margin-left: 60px;
+    padding: 30px 60px 41px 0px;
+    font-size: map.get(map.get(typo.$typography-desktop, "p"), "font-size");
+    border-top: 1px solid vars.$color-text-dark;
+  }
+}
+
+.consultation--open {
+  background-color: vars.$color-text-green;
+  transition: background-color 0.5s ease;
+}

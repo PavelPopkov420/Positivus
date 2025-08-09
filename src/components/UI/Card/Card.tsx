@@ -34,7 +34,6 @@ export const Card: FC<ICard> = ({ title1, title2, image, children, option }) => 
           </div>
           <div className={styles.card__image}>{image}</div>
         </div>
-   
     </>
   );
 };
