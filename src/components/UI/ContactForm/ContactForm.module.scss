@@ -1,0 +1,33 @@
+@use "sass:map";
+@use "../../../styles/typography" as typo;
+@use "../../../styles/variables" as vars;
+
+.fields {
+  margin-top: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: vars.$color-text-grey;
+  border-radius: 45px;
+  height: 773px;
+  &__form {
+    max-width: 556px;
+    width: 100%;
+    padding-left: 100px;
+    height: 633px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+  &__checkbox {
+    display: flex;
+    gap: 35px;
+    align-items: center;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+  }
+}

@@ -2,15 +2,15 @@ import "./App.scss";
 import { СonsultationScreen } from "./components/screens/consultationScreen";
 import { TeamScreen } from "./components/screens/teamScreen";
 import { CaseStudies } from "./components/UI/CaseStudies/CaseStudiesю";
+import { ContactForm } from "./components/UI/ContactForm/ContactForm";
 import { ContainerComponent } from "./components/UI/ContainerComponent/ContainerComponent";
 import { Header } from "./components/UI/Header/Header";
 import { Main } from "./components/UI/Main/Main";
 import { ServiceCards } from "./components/UI/ServiceCards/ServiceCrads";
+import SwiperComponent from "./components/UI/SwiperComponent/SwiperComponent";
 
 
 export default function App() {
-  
-
   return (
     <div className="container">
       <Header />
@@ -35,14 +35,20 @@ export default function App() {
       >
         <CaseStudies />
       </ContainerComponent>
-      <ContainerComponent title="Our Working Process " subtitle="Step-by-Step Guide to Achieving Your Business Goals">
-        <СonsultationScreen/>
+      <ContainerComponent
+        title="Our Working Process "
+        subtitle="Step-by-Step Guide to Achieving Your Business Goals"
+      >
+        <СonsultationScreen />
       </ContainerComponent>
-
-      <ContainerComponent title="Team" subtitle="Meet the skilled and experienced team behind our successful digital marketing strategies">
-        <TeamScreen/>
+      <ContainerComponent
+        title="Team"
+        subtitle="Meet the skilled and experienced team behind our successful digital marketing strategies"
+      >
+        <TeamScreen />
       </ContainerComponent>
-
+      <SwiperComponent />
+      <ContactForm/>  
 
     </div>
   );
