@@ -1,0 +1,57 @@
+@use "sass:map";
+@use "../../../styles/typography" as typo;
+@use "../../../styles/variables" as vars;
+
+.item {
+  max-width: 606px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px; // Добавляем отступы
+  box-sizing: border-box; // Важно!
+
+  &__bubble {
+    position: relative;
+    width: 100%;
+    height: auto;
+
+    svg {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+  }
+
+  &__qoute {
+    max-width: 502px;
+    width: 100%;
+    position: absolute;
+    top: 46%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    color: white;
+    line-height: 1.6;
+    font-size: 18px;
+    margin: 0;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    padding-left: 40px; // Уменьшил отступ
+  }
+
+  &__name {
+    color: vars.$color-text-green;
+    font-size: map.get(map.get(typo.$typography-desktop, "h4"), "font-size");
+    margin: 0 0 8px 0;
+  }
+
+  &__job {
+    color: vars.$color-text-white;
+    font-size: map.get(map.get(typo.$typography-desktop, "p"), "font-size");
+    margin: 0;
+  }
+}
