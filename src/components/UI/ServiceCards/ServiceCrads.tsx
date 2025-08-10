@@ -21,7 +21,6 @@ export const ServiceCards: FC<IServiceCards> = ({title, description, img}) =>{
                 </div>
                 <div className={styles['cta-card__img']}>
                     {img}
-                    <img src="" alt="" />
                 </div>
             </div>
         </>

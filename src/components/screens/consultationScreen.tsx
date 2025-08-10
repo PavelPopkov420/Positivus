@@ -37,7 +37,7 @@ export const СonsultationScreen = () => {
   ];
   return (
     <div className={styles.content}>
-      {consultationSteps.map((item) => (<Consultation content={item.content} id={item.id} title={item.title}/>)
+      {consultationSteps.map((item) => (<Consultation key={item.id} content={item.content} id={item.id} title={item.title}/>)
       )}
     </div>
   );
