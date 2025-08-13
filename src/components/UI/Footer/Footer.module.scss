@@ -85,6 +85,7 @@
       padding-left: 35px;
       font-size: map.get(map.get(typo.$typography-desktop, "p"), "font-size");
       background-color: #292a32;
+      color: vars.$color-text-white;
       border: 1px solid vars.$color-text-white;
       &::placeholder {
         color: vars.$color-text-white;
