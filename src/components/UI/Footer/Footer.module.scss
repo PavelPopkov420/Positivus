@@ -1,0 +1,112 @@
+@use "sass:map";
+@use "../../../styles/typography" as typo;
+@use "../../../styles/variables" as vars;
+
+.footer {
+  margin-top: 180px;
+  border-top-right-radius: 45px;
+  border-top-left-radius: 45px;
+  padding: 55px 60px 0 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  background-color: vars.$color-text-dark;
+  &__nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__logo {
+    text-decoration: none;
+    color: vars.$color-text-white;
+    display: flex;
+    gap: 11px;
+    img {
+      width: 29px;
+      height: 29px;
+    }
+  }
+  &__list {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+  }
+  &__item {
+    a {
+      color: vars.$color-text-white;
+    }
+  }
+  &__social {
+    display: flex;
+    gap: 20px;
+  }
+  &__info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__about {
+    max-width: 332px;
+    width: 100%;
+    margin-top: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    &-title {
+      align-self: self-start;
+      padding-left: 5px;
+      padding-right: 5px;
+      border-radius: 7px;
+      background-color: vars.$color-text-green;
+      font-size: map.get(map.get(typo.$typography-desktop, "h4"), "font-size");
+    }
+    &-email,
+    &-tel,
+    &-address {
+      color: vars.$color-text-white;
+      font-size: map.get(map.get(typo.$typography-desktop, "p"), "font-size");
+    }
+  }
+  &__subscribe {
+    max-width: 634px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background-color: #292a32;
+    border-radius: 14px;
+    padding: 58px 40px;
+    input {
+      max-width: 285px;
+      width: 100%;
+      height: 67px;
+      border-radius: 14px;
+      padding-left: 35px;
+      font-size: map.get(map.get(typo.$typography-desktop, "p"), "font-size");
+      background-color: #292a32;
+      border: 1px solid vars.$color-text-white;
+      &::placeholder {
+        color: vars.$color-text-white;
+      }
+    }
+    button {
+      height: 67px;
+      max-width: 249px;
+      width: 100%;
+      white-space: nowrap;
+    }
+  }
+  &__copyright {
+    border-top: 1px solid vars.$color-text-white;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    display: flex;
+    gap: 40px;
+    color: vars.$color-text-white;
+    font-size: map.get(map.get(typo.$typography-desktop, "p"), "font-size");
+    a {
+      color: vars.$color-text-white;
+    }
+  }
+}
