@@ -19,7 +19,7 @@ export const Consultation: FC<IConsultation> = ({ id, title, content }) => {
       <div className={styles.consultation__item}>
         <span className={styles.consultation__number}>{id}</span>
         <span className={styles.consultation__title}>{title}</span>
-        <button className={styles.consultation__btn} onClick={() => setOpen(!open)}>
+        <button className={styles.consultation__btn} onClick={() => setOpen(prev =>!prev)}>
           {open ? (
             <svg
               width="18"
