@@ -3,12 +3,13 @@ import { СonsultationScreen } from "./components/screens/consultationScreen";
 import { TeamScreen } from "./components/screens/teamScreen";
 import { CaseStudies } from "./components/UI/CaseStudies/CaseStudiesю";
 import { ContactForm } from "./components/UI/ContactForm/ContactForm";
+// import { ContactForm } from "./components/UI/ContactForm2/ContactForm";
 import { ContainerComponent } from "./components/UI/ContainerComponent/ContainerComponent";
+import { Footer } from "./components/UI/Footer/Footer";
 import { Header } from "./components/UI/Header/Header";
 import { Main } from "./components/UI/Main/Main";
 import { ServiceCards } from "./components/UI/ServiceCards/ServiceCrads";
 import SwiperComponent from "./components/UI/SwiperComponent/SwiperComponent";
-
 
 export default function App() {
   return (
@@ -48,8 +49,13 @@ export default function App() {
         <TeamScreen />
       </ContainerComponent>
       <SwiperComponent />
-      <ContactForm/>  
-
+      <ContainerComponent
+        title="Contact Us"
+        subtitle="Connect with Us: Let's Discuss Your Digital Marketing Needs"
+      >
+        <ContactForm />
+      </ContainerComponent>
+      <Footer/>
     </div>
   );
 }
