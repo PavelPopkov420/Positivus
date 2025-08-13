@@ -26,11 +26,11 @@ export const GetAQuoteForm = ({ register }: GetAQuoteFormProps) => (
         placeholder="Email"
       />
     </div>
-    <div className={styles.fields__phone}> {/* Новый класс для телефона */}
-      <p className={styles.fields__phone__title}>Phone Number</p>
+    <div className={styles.fields__phone}>
+      <p className={styles.fields__phone__title}>Phone Number*</p>
       <input
         className={styles.fields__phone__input}
-        {...register("message")}
+        {...register("message", { required: true })}
         type="tel"
         placeholder="Phone Number"
       />
