@@ -6,9 +6,10 @@ interface Iprops {
   children: ReactNode;
   option: "Dark" | "White" | "Green";
   style?: React.CSSProperties;
+  onClick?:React.MouseEventHandler<HTMLButtonElement>;
 }
 
-export const Button: FC<Iprops> = ({ children, option, style }) => {
+export const Button: FC<Iprops> = ({ children, option, style,onClick }) => {
   return (
     <button
       className={clsx(styles.button, {
@@ -17,6 +18,7 @@ export const Button: FC<Iprops> = ({ children, option, style }) => {
         [styles["button--green"]]: option === "Green",
       })}
       style={style}
+      onClick={onClick}
     >
       {children}
     </button>
