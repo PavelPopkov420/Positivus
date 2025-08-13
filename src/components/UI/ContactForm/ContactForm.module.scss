@@ -137,3 +137,43 @@
     }
   }
 }
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+
+  .modal {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+
+    button {
+      margin-top: 15px;
+      padding: 8px 16px;
+      background: vars.$color-text-dark;
+      color: vars.$color-text-white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      &:hover {
+        background: darken(vars.$color-text-green, 10%);
+        color: vars.$color-text-dark;
+
+        &:active {
+          transform: scale(0.98); // Легкое сжатие при клике
+        }
+      }
+    }
+  }
+}
