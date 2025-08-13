@@ -23,11 +23,117 @@
     display: flex;
     gap: 35px;
     align-items: center;
+    label {
+      input[type="checkbox"] {
+        appearance: none;
+        -webkit-appearance: none;
+
+        width: 28px;
+        height: 28px;
+        border: 2px solid #ccc;
+        border-radius: 50%;
+        outline: none;
+        cursor: pointer;
+        position: relative;
+        vertical-align: middle;
+        margin-right: 8px;
+
+        &:checked::after {
+          content: "";
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 15px;
+          height: 15px;
+          background: vars.$color-text-green;
+          border-radius: 50%;
+        }
+      }
+    }
   }
 
   &__info {
     display: flex;
     flex-direction: column;
     gap: 25px;
+  }
+
+  &__name {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    &__title {
+      font-size: map.get(map.get(typo.$typography-desktop, "p"), "font-size");
+    }
+    &__input {
+      width: 100%;
+      padding: 18px 0px 18px 30px;
+      border-radius: 10px;
+      border: 1px solid vars.$color-text-dark;
+    }
+  }
+
+  &__email {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    &__title {
+      font-size: map.get(map.get(typo.$typography-desktop, "p"), "font-size");
+    }
+    &__input {
+      width: 100%;
+      padding: 18px 0px 18px 30px;
+      border-radius: 10px;
+      border: 1px solid vars.$color-text-dark;
+    }
+  }
+  &__message {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    &__title {
+      font-size: map.get(map.get(typo.$typography-desktop, "p"), "font-size");
+    }
+
+    &__input {
+      height: 190px;
+      width: 100%;
+      padding: 18px 0px 18px 30px;
+      border-radius: 10px;
+      border: 1px solid vars.$color-text-dark;
+      resize: none; // Отключаем изменение размера
+      font-family: inherit; // Для согласованности шрифтов
+
+      &::placeholder {
+        vertical-align: top;
+        line-height: 1.2;
+        opacity: 1;
+        color: #999;
+      }
+    }
+  }
+  &__phone {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    &__title {
+      font-size: map.get(map.get(typo.$typography-desktop, "p"), "font-size");
+    }
+
+    &__input {
+      width: 100%;
+      padding: 18px 0px 18px 30px;
+      border-radius: 10px;
+      border: 1px solid vars.$color-text-dark;
+      font-family: inherit;
+
+      // Специфичные стили для поля телефона при необходимости
+      &::placeholder {
+        color: #999;
+      }
+    }
   }
 }
