@@ -45,4 +45,9 @@
   background-color: vars.$color-text-green;
   color: vars.$color-text-dark;
   border-color: vars.$color-text-green;
+  &:hover {
+    background-color: vars.$color-text-white;
+    color: vars.$color-text-dark;
+    border: none;
+  }
 }
